@@ -1,0 +1,6 @@
+{
+	"name": "demo",
+	"devDependencies": {
+    "@angular/cli": "^1.7.3"
+	}
+}

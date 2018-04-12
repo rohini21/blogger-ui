@@ -1,0 +1,12 @@
+.profile-blogs li {
+  margin: 15px 0; 
+	list-style: none;
+}
+
+.p-header {
+	text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 15px 0 25px;
+  color: #fff;
+}

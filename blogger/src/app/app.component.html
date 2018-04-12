@@ -1,0 +1,32 @@
+<div class="app-wrapper">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid nav-wrap clearfix">
+	    <div class="navbar-header">
+	      <a class="brand hand" routerLink="/dashboard">
+            BLOG
+	        <!-- <img alt="Brand" src="../assets/blog.png"> -->
+	      </a>
+	    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" *ngIf="user">
+          <a href="" class="dropdown-toggle hand" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <div class="profile-img">
+              <img src="../assets/def-user.png" alt="">
+            </div>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="hand"><a routerLink="/profile/{{user.uid}}">Profile</a></li>
+            <li class="hand"><a routerLink="/blog/create">Write Blog</a></li>
+            <li class="hand"><a (click)="logout()">Logout</a></li>
+          </ul>
+        </li>
+        <li *ngIf="!user"><button class="btn btn-auth" (click)="login()">Login</button></li>
+        <li *ngIf="!user"><button class="btn btn-auth" (click)="signup()">Sign Up</button></li>
+      </ul>
+	  </div>
+	</nav>
+	<router-outlet></router-outlet>
+  <footer>
+    @copyrights
+  </footer>
+</div>

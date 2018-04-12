@@ -1,0 +1,100 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-dialog-container {
+  position: relative;
+}
+.modal-dialog {
+  margin-top: 150px !important;
+}
+.modal-content {
+  border-radius: 0;
+  padding: 30px;
+}
+.modal-backdrop.fade {
+  opacity: 0.8 !important;
+}
+.modal-body {
+  padding-left: 0;
+}
+.modal-body .form-control {
+  border: 0;
+  outline: 0;
+  height: 37px;
+  font-size: 16px;
+  border-radius: 0px!important;
+  padding: 0; 
+}
+.modal-body .form-control:focus {
+  border: 0;
+  border-bottom: 1px solid #17a2e0;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+.modal-body .form-control input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #1e7b85;
+  opacity: 1; /* Firefox */
+}
+
+.modal-header {
+  display: block;
+  font-size: 24px;
+  color: #333c46;
+  border-bottom: 0;
+  padding-left: 0;
+}
+
+.modal-header h4 {
+  font-size: 24px;                  
+}
+.modal-footer {
+  display: block;
+  font-size: 18px;
+  color: #9ea8b5;
+  border-top: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 13px;
+}
+.modal-header .close {
+  font-size: 32px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-weight: 300;
+}
+.modal-header .close:focus {
+  border: 0;
+  outline: 0; 
+}
+.modal-body .sub-1 {
+  font-size: 24px;
+  color: #47535d;
+}
+.modal-body .sub-2 {
+  width: 210px;
+  font-size: 24px;
+  color: #818c9d;
+  margin-bottom: 55px;
+}
+.auth-btn {
+  padding: 0;
+  font-size: 21px;
+  background: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  color: #17a2e0;
+  margin: 55px 0 44px;
+}
+.auth-btn:hover {
+  color: #1597d1;
+}
+
+.auth-btn:focus, .auth-btn:active {
+  background: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+}

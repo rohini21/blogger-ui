@@ -1,0 +1,69 @@
+/*Dashboard*/
+.dashboard-wrap {
+	width: 100%;
+  height: 100%;
+  padding: 0 5%;
+}
+.search-box {
+  margin: 10px auto 30px;
+  width: 500px;
+}
+.search-box .search-input {
+  position: relative;
+  width: 75%;
+}
+.search-input label {
+  position: absolute;
+  right: 9px;
+  top: 12px;
+}
+.search-input input {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 9px 28px 9px 10px;
+  color: #000000;
+}
+.search-input input::placeholder {
+  color: #666666;
+}
+.search-input input:focus {
+  outline: none;
+}
+.search-box .search-select {
+  width: 20%;
+}
+.search-box .search-select select:focus {
+  outline: none;
+}
+.search-box .search-select select {
+  width: 100%;
+  padding: 9px 9px 10px;
+  border: 1px solid #000000;
+  border-left: none;
+}
+
+.dw-blogs, .dw-users {
+	width: 100%;
+  height: 100%;
+}
+.dw-blogs li, .dw-users li {
+  margin: 15px 0; 
+	list-style: none;
+}
+
+@media (max-width: 767px) {
+  .search-box {
+    width: 100%;
+  }
+  .search-box .search-input {
+    width: 100%;
+  }
+  .search-box .search-select {
+    width: 100%;
+  }
+
+  .item-wrap {
+    padding-left : 0; 
+    padding-right : 0; 
+  }
+}

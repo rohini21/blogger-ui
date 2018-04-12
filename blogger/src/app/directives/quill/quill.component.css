@@ -1,0 +1,18 @@
+#editor {
+  max-height: 344px;
+  min-height: 344px;
+  overflow-y: auto;
+  background: #FFF;
+  color: #000;
+  font-size: 16px;
+}
+.blog-wrap-upsert .form-group .ql-toolbar.ql-snow {
+  background-color: #fff !important;
+}
+
+@media (max-width: 767px) {
+  #editor {
+	  max-height: 280px;
+	  min-height: 280px;
+	}
+}

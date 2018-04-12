@@ -1,0 +1,39 @@
+<div class="dashboard-wrap clearfix">
+	<div class="search-box">
+		<form class="form-inline">
+		  <div class="form-group search-input">
+		  	<label class="fa fa-search"></label>
+				<input type="text" placeholder="Search" name="searchTerm" [(ngModel)]="searchTerm" (ngModelChange)="getEntities()">
+		  </div>
+		  <div class="form-group search-select">
+				<select name="searchEntity" [(ngModel)]="searchEntity" (ngModelChange)="getEntities()">
+					<option value="users">Users</option>
+					<option value="blogs">Blogs</option>
+				</select>
+		  </div>
+		</form>
+	</div>
+	<div class="no-items loader" *ngIf="(searchEntity === 'blogs' && !blogs) || (searchEntity === 'users' && !users)">
+		Loading...
+	</div>
+	<div class="dw-blogs" *ngIf="searchEntity === 'blogs'">
+		<ul *ngIf="blogs.length">
+			<li *ngFor="let blog of blogs" class="col-md-4 item-wrap">
+	      <blog-item [blog]="blog" [page]="page"></blog-item>
+	    </li>
+		</ul>
+	  <div class="no-items" *ngIf="!!blogs && !blogs.length">
+	  	No blogs present
+	  </div>	
+  </div>
+  <div class="dw-users" *ngIf="searchEntity === 'users'">
+		<ul *ngIf="users.length">
+			<li *ngFor="let user of users" class="col-md-4 item-wrap">
+	      <user-item [user]="user"></user-item>
+	    </li>
+		</ul>
+	  <div class="no-items" *ngIf="!!users && !users.length">
+	  	No users present
+	  </div>	
+  </div>
+</div>

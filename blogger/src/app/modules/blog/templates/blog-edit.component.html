@@ -1,0 +1,18 @@
+<div class="blog-wrap-upsert" *ngIf="!blog">
+	Loading....
+</div>
+<div class="blog-wrap-upsert" *ngIf="blog">
+	<form>
+	  <div class="form-group">
+			<input class="form-control" placeholder="Title" type="text" name="title" [(ngModel)]="blog.title">
+	  </div>
+	  <div class="form-group">
+	  	<quill-editor (messageEvent)="receiveMessage($event)" [(text)]="blog.content"></quill-editor>
+	  </div>
+		<div class="button-wrap">
+			<button class="btn btn-default b-btn btn-fix" type="button" (click)="edit()"><i class="fa fa-pencil"></i><span>Edit</span></button>
+			<button class="btn btn-default b-btn btn-fix" type="button" (click)="togglePublish()"><i class="fa fa-cloud"></i><span>{{blog.published ? 'Unpublish' : 'Publish'}}</span></button>
+			<button class="btn btn-default b-btn-del btn-fix" type="button" (click)="delete()" title="create"><i class="fa fa-trash"></i><span>Delete</span></button>
+		</div>
+	</form>
+</div>

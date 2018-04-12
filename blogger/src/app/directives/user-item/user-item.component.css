@@ -1,0 +1,35 @@
+.user-item {
+  position: relative;
+  padding: 15px 15px 15px 112px;
+  width: 100%;
+  min-height: 125px;
+  border: 1px solid #1e7b85;
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 5px rgba(30, 123, 133, 0.21176470588235294);
+  box-shadow: 4px 4px 5px rgba(30, 123, 133, 0.21176470588235294);
+}
+
+.user-img {
+	position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 18px;
+  left: 15px;
+}
+.user-img img {
+	width: 100%;
+	height: 100%;
+}
+.user-name {
+	width: 200px;
+  display: inline-block;
+}
+
+.user-name a {
+	word-wrap: break-word;
+  font-size: 22px;
+  color: #1e7b85;
+  text-decoration: none;
+  line-height: 2px;
+}

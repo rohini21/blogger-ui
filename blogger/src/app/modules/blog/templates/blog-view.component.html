@@ -1,0 +1,13 @@
+<div class="blog-wrap" *ngIf="blog">
+	<div class="b-img"></div>
+	<div class="b-content-wrap">
+		<div class="b-owner"><a class="hand" routerLink="/profile/{{blog.owner.uid}}">By {{blog.owner.username}}</a></div>
+		<div class="b-title">{{blog.title}}</div>
+		<div class="b-content">
+			<p [innerHTML]="blog.content | keepHtml"></p>
+		</div>
+	</div>
+</div>
+<div class="blog-wrap" *ngIf="!blog">
+	loading...
+</div>

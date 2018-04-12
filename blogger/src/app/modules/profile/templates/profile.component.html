@@ -1,0 +1,15 @@
+<div class="profile-wrap clearfix" *ngIf="profileUser">
+	<div *ngIf="(!currUser) || (!!currUser && profileUser.uid !== currUser['uid'])" class="p-header">{{profileUser.username}}'s blogs</div>
+	<div *ngIf="profileUser.uid === (!!currUser && currUser['uid'])" class="p-header">My blogs</div>
+	<div class="profile-blogs" *ngIf="blogs">
+		<ul *ngIf="blogs.length">
+			<li *ngFor="let blog of blogs" class="col-md-4">
+	      <blog-item [blog]="blog" [page]="page" [profile]="profileUser" [currUser]="currUser"></blog-item>
+	    </li>
+		</ul>
+	  <div class="no-items" *ngIf="!!blogs && !blogs.length">No blogs present</div>	
+  </div>
+  <div class="no-items" *ngIf="!blogs">
+		loading...
+	</div>
+</div>

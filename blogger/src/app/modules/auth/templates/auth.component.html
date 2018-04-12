@@ -1,0 +1,48 @@
+<div class="signin-wrap" *ngIf="action === 'signin'">
+	<div class="modal-header">
+	  <button type="button" class="close" aria-label="Close" (click)="dialogRef.close('Cross click')">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	  <h4 class="modal-title">Blog</h4>
+	</div>
+	<div class="modal-body">
+	  <p class="sub-1">Welcome back!</p>
+	  <p class="sub-2">Sign in to continue to Blog.</p>
+		<form>
+		  <div class="form-group">
+		    <input name="name" type="text" class="form-control" id="name" placeholder="name" [(ngModel)]="user.username">
+		  </div>
+		  <div class="form-group">
+		    <input name="password" type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="user.password">
+		  </div>
+	  	<button type="button" class="btn auth-btn" (click)="signin()">Login</button>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<p>Don't have an account yet? Then <a (click)="goto('signup')">Sign up.</a></p>
+	</div>
+</div>
+<div class="signup-wrap" *ngIf="action === 'signup'">
+	<div class="modal-header">
+	  <button type="button" class="close" aria-label="Close" (click)="dialogRef.close('Cross click')">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	  <h4 class="modal-title">Blog</h4>
+	</div>
+	<div class="modal-body">
+	  <p class="sub-1">Welcome!</p>
+	  <p class="sub-2">Create your account in Blog.</p>
+		<form>
+		  <div class="form-group">
+		    <input type="text" class="form-control" name="name" id="name" placeholder="Name" [(ngModel)]="user.username">
+		  </div>
+		  <div class="form-group">
+		    <input type="password" class="form-control" name="password" id="password" placeholder="Password" [(ngModel)]="user.password">
+		  </div>
+	  	<button type="button" class="btn auth-btn" (click)="signup()">Sign Up</button>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<p>Return to <a (click)="goto('signin')">Login</a></p>
+	</div>
+</div>

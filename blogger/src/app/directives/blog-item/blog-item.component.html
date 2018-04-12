@@ -1,0 +1,11 @@
+<div class="blog-item">
+	<div class="action-wrap" *ngIf="showAction">
+		<a class="edit" routerLink="/blog/{{blog.uid}}/edit"><a><i class="fa fa-pencil"></i></a></a>
+	</div>
+	<div class="bi-img"></div>
+	<div class="bi-content">
+		<div class="b-title"><a class="create" routerLink="/blog/{{blog.uid}}/view">{{blog.title}}</a></div>
+		<div class="b-content"><p [innerHTML]="blog.content | keepHtml"></p></div>
+		<div class="b-owner"><a routerLink="/profile/{{blog.owner.uid}}">{{blog.owner.username}}</a></div>
+	</div>
+</div>
